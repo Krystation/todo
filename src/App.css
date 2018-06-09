@@ -1,0 +1,62 @@
+.todo_list {
+  max-width: 750px;
+  width: 90%;
+  margin: auto;
+  background: #CCC;
+  margin-top: 15px;
+  padding: 12px 6px 24px;
+  box-sizing: border-box;
+}
+.add_section{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  margin-bottom: 24px;
+}
+.add_section input{
+  box-sizing: border-box;
+  border: none;
+  padding: 12px;
+}
+
+.add_section button{
+  box-sizing: border-box;
+  align-self: stretch;
+
+  border: none;
+
+  position: relative;
+  cursor: pointer;
+}
+
+.add_section button:before{
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 1px;
+  height: 80%;
+  background: #DDD;
+}
+
+.list, .no_list{
+  width: 80%;
+  margin: auto;
+  list-style: none;
+}
+.no_list{
+  text-align: center;
+  display: block;
+}
+
+.todo button{
+  background: #ff0101;
+  margin-right: 9px;
+  color: white;
+  border: none;
+  border-radius: 18px;
+}
