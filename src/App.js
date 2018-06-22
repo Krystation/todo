@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import './App.css';
+import './styles.css';
 import SingleTodo from './SingleTodo';
+import AddTodo from './AddTodo';
+import NoTodo from './NoTodo';
+import ComplexTodo from './ComplexTodo'
 
 class App extends Component {
   	constructor(){
-	  	super();
+		super();
+		
 	  	this.state = {
-			todos: [],
-		  	currentTodo: ""
+			todos: []
 	  	}
   	}
 	// Function called wheninput text changes
@@ -47,11 +50,12 @@ class App extends Component {
 		});
 		return(
 			<div className="todo_list">
+				<h1 className="page_title">Let's Get Shit Done Today</h1>
 				<div className="add_section">
 					<input className="new_item" placeholder="enter todos" value={this.state.currentTodo} onChange={this.onInputChange}/>
 					<button className="add_btn" onClick={this.onClick}>ADD!</button>
 				</div>
-				{this.state.todos.length === 0 ? <span className="no_list">No todos</span> : <ul className="list">{bulletTodo}</ul>}
+				{this.state.todos.length === 0 ? <NoTodo/> : <ul className="list">{bulletTodo}</ul>}
 			</div>
 		);
   	}
